@@ -10,3 +10,17 @@
                               (sidebar e main) e ficar do mesmo tamnho. Dessa forma eu
                               garanto que ele vai ficar alinhado ao topo  */
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* o rem é a unidade relativa ao font-size aplicado no html
+                         isso quer dizer que, ao alterarmos esse font-size alteramos tudo
+                         que esta utilizando rem! é MUITO IMPORTANTE que ao alterarmos esse
+                         font-size, deve fazer utilizando %, isso para ser mais responsivo ainda
+                         quando levamos em consideração o usuário, que pode alterar o tamanho da
+                         font em seu dispositivo */
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
