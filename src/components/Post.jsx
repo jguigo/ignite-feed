@@ -32,6 +32,10 @@ const Post = ({ author, content, publishedAt }) => {
     setNewCommentText(event.target.value);
   }
 
+  function deleteComment(commentToDelete) {
+    setComments(comments.filter(comment => comment !== commentToDelete));
+  }
+
   return (
     <article className={styles.post}>
       <header>
@@ -77,7 +81,11 @@ const Post = ({ author, content, publishedAt }) => {
 
       <div className={styles.commentList}>
         {comments.map((comment) => (
-          <Comment key={comment} content={comment} />
+          <Comment 
+            key={comment} 
+            content={comment} 
+            onDeleteComment={deleteComment}
+          />
         ))}
       </div>
     </article>
